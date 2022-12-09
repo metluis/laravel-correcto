@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
       //Usuarios base
       $this->call(UserSeeder::class);
 
-      User::factory(10)->create()->each(function($user){
+      User::factory(100)->create()->each(function($user){
         $user->assignRole('User');
       });
     }
